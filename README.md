@@ -7,8 +7,11 @@ The x' = Fx + ν equation does these prediction calculations for us.
 ![image](https://user-images.githubusercontent.com/59261333/72988538-20839e80-3df5-11ea-9831-2b66678a0358.png)
 
 Process noise refers to the uncertainty in the prediction step. We assume the object travels at a constant velocity, but in reality, the object might accelerate or decelerate. The notation ν∼N(0,Q) defines the process noise as a gaussian distribution with mean zero and covariance Q.
+
 when we predict the position one second later, our uncertainty increases. P' = FPFT + Q represents this increase in uncertainty.
+
 Because our state vector only tracks position and velocity, we are modeling acceleration as a random noise. The Q matrix includes time Δt to account for the fact that as more time passes, we become more uncertain about our position and velocity. So, as Δt increases, we add more uncertainty to the state covariance matrix P.
+
 Combining both 2D position and 2D velocity equations previously deducted formulas we have:
 
 ![image](https://user-images.githubusercontent.com/59261333/72988947-f9799c80-3df5-11ea-81d9-b175f4f42634.png)
